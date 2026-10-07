@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="module" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="4290d25dafc7f025d308ff577898444d">
+        <source>Selected file:</source>
+        <target>Selected file:</target>
+      </trans-unit>
+      <trans-unit id="cd25361eb4df2c06fe90b909d3675bff">
+        <source>Click here to pick a file</source>
+        <target>Click here to pick a file</target>
+      </trans-unit>
+      <trans-unit id="51af75d58e7661384a1c371528f82c57">
+        <source>or drag one onto this field.</source>
+        <target>or drag one onto this field.</target>
+      </trans-unit>
+      <trans-unit id="7f329b6adc043c45381a48f2b01f3098">
+        <source>Pick a file first.</source>
+        <target>Pick a file first.</target>
+      </trans-unit>
+      <trans-unit id="e85efb0323a3a775af4fff45bdf2a2b0">
+        <source>This shop does not accept that file format.</source>
+        <target>This shop does not accept that file format.</target>
+      </trans-unit>
+      <trans-unit id="ccab070da5c1f82a343ad8c2cf3a2649">
+        <source>The file could not be read.</source>
+        <target>The file could not be read.</target>
+      </trans-unit>
+      <trans-unit id="37ae1786b54a9be01974345f6d888189">
+        <source>The file holds no product rows.</source>
+        <target>The file holds no product rows.</target>
+      </trans-unit>
+      <trans-unit id="230794b68252611969c38827d6dddcce">
+        <source>The import failed. Please try again.</source>
+        <target>The import failed. Please try again.</target>
+      </trans-unit>
+      <trans-unit id="d24e41338a9cc7a753860d17df1ae3eb">
+        <source>Importing…</source>
+        <target>Importing…</target>
+      </trans-unit>
+      <trans-unit id="b19a3ef2225fb8beeffcae0f52ecb217">
+        <source>cart-import-report</source>
+        <target>cart-import-report</target>
+      </trans-unit>
+      <trans-unit id="f29ddbfb905eb2593fdcdfb243f9af85">
+        <source>Added</source>
+        <target>Added</target>
+      </trans-unit>
+      <trans-unit id="44a2c95d97281f875443d614d817b5ef">
+        <source>Reduced to available stock</source>
+        <target>Reduced to available stock</target>
+      </trans-unit>
+      <trans-unit id="43cb22cd80030fa37912772bd0f1ae5e">
+        <source>No such product</source>
+        <target>No such product</target>
+      </trans-unit>
+      <trans-unit id="b55197a49e8c4cd8c314bc2aa39d6feb">
+        <source>Out of stock</source>
+        <target>Out of stock</target>
+      </trans-unit>
+      <trans-unit id="546b3c8f2785fa574bf0dcc5389c3993">
+        <source>Not available for sale</source>
+        <target>Not available for sale</target>
+      </trans-unit>
+      <trans-unit id="36d0047ffcc02ffe8247b26047514e95">
+        <source>Quantity is not a positive number</source>
+        <target>Quantity is not a positive number</target>
+      </trans-unit>
+      <trans-unit id="8db3d85532cefac38018832580b416d2">
+        <source>Below the minimum order quantity</source>
+        <target>Below the minimum order quantity</target>
+      </trans-unit>
+      <trans-unit id="c5960f7eafd457997f6342037e2786fb">
+        <source>Skipped — over the row limit</source>
+        <target>Skipped — over the row limit</target>
+      </trans-unit>
+      <trans-unit id="821635aa05ef3274378b8bf772aa7dac">
+        <source>Could not be added</source>
+        <target>Could not be added</target>
+      </trans-unit>
+      <trans-unit id="b6664cd552a962600ce17c920f0c8061">
+        <source>Fill the cart from a file</source>
+        <target>Fill the cart from a file</target>
+      </trans-unit>
+      <trans-unit id="d3d2e617335f08df83599665eef8a418">
+        <source>Close</source>
+        <target>Close</target>
+      </trans-unit>
+      <trans-unit id="928a47c563a7f70fdc2c896355b019ee">
+        <source>One row per product: reference, EAN-13, quantity. The first row is skipped as a header.</source>
+        <target>One row per product: reference, EAN-13, quantity. The first row is skipped as a header.</target>
+      </trans-unit>
+      <trans-unit id="beb7058c616b3d75c5eaad8344993291">
+        <source>CSV and spreadsheet files are accepted.</source>
+        <target>CSV and spreadsheet files are accepted.</target>
+      </trans-unit>
+      <trans-unit id="f4730279c33611b8063e50149ccde3ec">
+        <source>Spreadsheet files are accepted.</source>
+        <target>Spreadsheet files are accepted.</target>
+      </trans-unit>
+      <trans-unit id="9c0b43fb005ed8af0dd679f744dbd80b">
+        <source>CSV files are accepted.</source>
+        <target>CSV files are accepted.</target>
+      </trans-unit>
+      <trans-unit id="62744fa88b1b5a2b76bdb84d59ff8024">
+        <source>Download an example file</source>
+        <target>Download an example file</target>
+      </trans-unit>
+      <trans-unit id="b06b3bf8816c4eae889d07ca8ce2e73d">
+        <source>Rows in the file:</source>
+        <target>Rows in the file:</target>
+      </trans-unit>
+      <trans-unit id="5f126e1ed3e4b0f0533710d861feecef">
+        <source>Added to the cart:</source>
+        <target>Added to the cart:</target>
+      </trans-unit>
+      <trans-unit id="cc654a94313f98e78c945bc8339c2853">
+        <source>Reduced to available stock:</source>
+        <target>Reduced to available stock:</target>
+      </trans-unit>
+      <trans-unit id="5fc68829f80306910180bee58dc1dabb">
+        <source>Not added:</source>
+        <target>Not added:</target>
+      </trans-unit>
+      <trans-unit id="d0ca5f3888abe8687f6b08f88d268064">
+        <source>Reference / EAN</source>
+        <target>Reference / EAN</target>
+      </trans-unit>
+      <trans-unit id="b823a976d0f14e7bbc37a9dd7c2b232c">
+        <source>In the file</source>
+        <target>In the file</target>
+      </trans-unit>
+      <trans-unit id="5b2902495b5c9c54f20f6cbc2c5fdeb1">
+        <source>In the cart</source>
+        <target>In the cart</target>
+      </trans-unit>
+      <trans-unit id="8eea62084ca7e541d918e823422bd82e">
+        <source>Result</source>
+        <target>Result</target>
+      </trans-unit>
+      <trans-unit id="72d6d7a1885885bb55a565fd1070581a">
+        <source>Import</source>
+        <target>Import</target>
+      </trans-unit>
+      <trans-unit id="ea4788705e6873b424c65e91c2846b19">
+        <source>Cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="180d282f23dbd646cb390e539ccbd1aa">
+        <source>Import another file</source>
+        <target>Import another file</target>
+      </trans-unit>
+      <trans-unit id="f4a8bac81685310e23ff7b9d466324b4">
+        <source>Download the report</source>
+        <target>Download the report</target>
+      </trans-unit>
+      <trans-unit id="845cd68da86b0805da9212bb6829a712">
+        <source>Back to the cart</source>
+        <target>Back to the cart</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

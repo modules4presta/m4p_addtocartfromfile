@@ -1,0 +1,26 @@
+{
+    "name": "modules4presta/m4p_addtocartfromfile",
+    "description": "Lets customers fill their PrestaShop cart from a CSV or spreadsheet file with product references and quantities.",
+    "type": "prestashop-module",
+    "license": "MIT",
+    "homepage": "https://nice-code.com/pl/produkty/sklep-b2b-prestashop",
+    "authors": [
+        {
+            "name": "Modules4Presta",
+            "email": "contact@modules4presta.io",
+            "homepage": "https://nice-code.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "classmap": [
+            "m4p_addtocartfromfile.php",
+            "controllers/"
+        ]
+    },
+    "config": {
+        "prepend-autoloader": false
+    }
+}

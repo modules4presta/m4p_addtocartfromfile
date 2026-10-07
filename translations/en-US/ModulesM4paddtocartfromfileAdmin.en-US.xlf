@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="module" source-language="en-US" target-language="en-US" datatype="plaintext">
+    <body>
+      <trans-unit id="6abc44c3cae4a94bdb58784d929ab9e2">
+        <source>Add to cart from a file</source>
+        <target>Add to cart from a file</target>
+      </trans-unit>
+      <trans-unit id="12eccac3751698aa5b39a46d07defdec">
+        <source>Lets customers fill their cart from a CSV or spreadsheet file with product references and quantities.</source>
+        <target>Lets customers fill their cart from a CSV or spreadsheet file with product references and quantities.</target>
+      </trans-unit>
+      <trans-unit id="831e3f941af1e9453f7cfded3fcf508e">
+        <source>Remove the module and its settings? Carts are not touched.</source>
+        <target>Remove the module and its settings? Carts are not touched.</target>
+      </trans-unit>
+      <trans-unit id="183286b94a031e366dc559f38c0d819e">
+        <source>The row limit must be a number greater than zero.</source>
+        <target>The row limit must be a number greater than zero.</target>
+      </trans-unit>
+      <trans-unit id="b39bcd3a2d2ad78bc0d41b1a1288e0bd">
+        <source>Enable at least one file format, otherwise there is nothing customers could upload.</source>
+        <target>Enable at least one file format, otherwise there is nothing customers could upload.</target>
+      </trans-unit>
+      <trans-unit id="b5d0c4bbc021461d2c58148f89c91a1b">
+        <source>Each row is one product: reference, EAN-13, quantity. The first row is treated as a header and skipped.</source>
+        <target>Each row is one product: reference, EAN-13, quantity. The first row is treated as a header and skipped.</target>
+      </trans-unit>
+      <trans-unit id="d8916f8a4a158883a32b5ff88e724af1">
+        <source>A row matches on the reference first and falls back to the EAN-13, so one of the two columns is enough.</source>
+        <target>A row matches on the reference first and falls back to the EAN-13, so one of the two columns is enough.</target>
+      </trans-unit>
+      <trans-unit id="390e016c3c32c6048375391cef2ea97b">
+        <source>References of combinations work as well, and quantities above the available stock are reduced instead of rejected.</source>
+        <target>References of combinations work as well, and quantities above the available stock are reduced instead of rejected.</target>
+      </trans-unit>
+      <trans-unit id="93cba07454f06a4a960172bbd6e2a435">
+        <source>Yes</source>
+        <target>Yes</target>
+      </trans-unit>
+      <trans-unit id="bafd7322c6e97d25b6299b5d6fe8920b">
+        <source>No</source>
+        <target>No</target>
+      </trans-unit>
+      <trans-unit id="f4f70727dc34561dfde1a3c529b6205c">
+        <source>Settings</source>
+        <target>Settings</target>
+      </trans-unit>
+      <trans-unit id="8ace33f38590b0d00d8d5d00ea68a334">
+        <source>Show the import button</source>
+        <target>Show the import button</target>
+      </trans-unit>
+      <trans-unit id="160cc23fe293f9600d935f93400232cb">
+        <source>Turns the button under the cart on and off.</source>
+        <target>Turns the button under the cart on and off.</target>
+      </trans-unit>
+      <trans-unit id="169ef1b16c6191ff6afc65434906fbc2">
+        <source>Accept CSV files</source>
+        <target>Accept CSV files</target>
+      </trans-unit>
+      <trans-unit id="c8f0df6fb1f52f850173e85fb919fc28">
+        <source>Semicolon-separated files, read in the browser.</source>
+        <target>Semicolon-separated files, read in the browser.</target>
+      </trans-unit>
+      <trans-unit id="ff1bc016af815125307cb1d86970541e">
+        <source>Accept XLS and XLSX files</source>
+        <target>Accept XLS and XLSX files</target>
+      </trans-unit>
+      <trans-unit id="e79b8e8b9f13e250c13ffe77d9e62f20">
+        <source>Spreadsheets need a parser of about 900 kB, which the cart page loads only once a visitor picks such a file.</source>
+        <target>Spreadsheets need a parser of about 900 kB, which the cart page loads only once a visitor picks such a file.</target>
+      </trans-unit>
+      <trans-unit id="1235493cc134f2051342095a83f10a8d">
+        <source>Rows per import</source>
+        <target>Rows per import</target>
+      </trans-unit>
+      <trans-unit id="fc5b648f6a8101b733dbb8ca7f8279ed">
+        <source>Rows beyond this limit are ignored and reported back to the customer.</source>
+        <target>Rows beyond this limit are ignored and reported back to the customer.</target>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
+        <source>Save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="630f6dc397fe74e52d5189e2c80f282b">
+        <source>Back to list</source>
+        <target>Back to list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
