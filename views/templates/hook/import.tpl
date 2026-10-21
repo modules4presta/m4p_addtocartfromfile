@@ -31,7 +31,7 @@
 					<input type="file" id="m4p-atcff-file" class="m4p-atcff__input" accept="{$m4p_atcff_accept|escape:'html':'UTF-8'}" data-m4p-atcff-input>
 				</div>
 
-				<p class="m4p-atcff__hint">
+				<p class="m4p-atcff__hint" data-m4p-atcff-hint>
 					{l s='One row per product: reference, EAN-13, quantity. The first row is skipped as a header.' d='Modules.M4paddtocartfromfile.Shop'}
 					{if $m4p_atcff_csv && $m4p_atcff_xls}
 						{l s='CSV and spreadsheet files are accepted.' d='Modules.M4paddtocartfromfile.Shop'}

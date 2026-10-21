@@ -2,7 +2,7 @@
 <module>
     <name>m4p_addtocartfromfile</name>
     <displayName><![CDATA[Koszyk z pliku]]></displayName>
-    <version><![CDATA[2.0.0]]></version>
+    <version><![CDATA[2.1.0]]></version>
     <description><![CDATA[Pozwala klientom wypełnić koszyk plikiem CSV lub arkuszem z referencjami produktów i ilościami.]]></description>
     <author><![CDATA[Modules4Presta]]></author>
     <tab><![CDATA[front_office_features]]></tab>

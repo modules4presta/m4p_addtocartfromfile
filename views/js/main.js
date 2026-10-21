@@ -103,7 +103,7 @@
     this.summary = root.querySelector('[data-m4p-atcff-summary]');
     this.tableWrap = root.querySelector('[data-m4p-atcff-tablewrap]');
     this.rows = root.querySelector('[data-m4p-atcff-rows]');
-    this.hint = root.querySelector('.m4p-atcff__hint');
+    this.hint = root.querySelector('[data-m4p-atcff-hint]');
     this.submit = root.querySelector('[data-m4p-atcff-submit]');
     this.cancel = root.querySelectorAll('[data-m4p-atcff-close]');
     this.again = root.querySelector('[data-m4p-atcff-again]');
@@ -115,10 +115,6 @@
 
   Importer.prototype.bind = function () {
     var self = this;
-
-    this.root.querySelector('[data-m4p-atcff-open]').addEventListener('click', function () {
-      self.open();
-    });
 
     Array.prototype.forEach.call(this.cancel, function (button) {
       button.addEventListener('click', function () {
@@ -181,6 +177,12 @@
   };
 
   Importer.prototype.open = function () {
+    // Under body, so a checkout that re-renders the cart block cannot remove an open dialog
+    // and no transformed ancestor can trap its fixed position.
+    if (this.modal.parentNode !== document.body) {
+      document.body.appendChild(this.modal);
+    }
+
     this.modal.hidden = false;
     document.body.classList.add('m4p-atcff-open');
   };
@@ -310,10 +312,10 @@
       this.rows.appendChild(row);
     }, this);
 
-    this.root.querySelector('[data-m4p-atcff-count-total]').textContent = results.length;
-    this.root.querySelector('[data-m4p-atcff-count-added]').textContent = counts.imported;
-    this.root.querySelector('[data-m4p-atcff-count-reduced]').textContent = counts.reduced;
-    this.root.querySelector('[data-m4p-atcff-count-failed]').textContent = counts.failed;
+    this.modal.querySelector('[data-m4p-atcff-count-total]').textContent = results.length;
+    this.modal.querySelector('[data-m4p-atcff-count-added]').textContent = counts.imported;
+    this.modal.querySelector('[data-m4p-atcff-count-reduced]').textContent = counts.reduced;
+    this.modal.querySelector('[data-m4p-atcff-count-failed]').textContent = counts.failed;
 
     this.drop.hidden = true;
     this.hint.hidden = true;
@@ -355,7 +357,7 @@
 
   Importer.prototype.downloadReport = function () {
     var head = Array.prototype.map
-      .call(this.root.querySelectorAll('.m4p-atcff__table thead th'), function (cell) {
+      .call(this.modal.querySelectorAll('thead th'), function (cell) {
         return cell.textContent;
       })
       .join(';');
@@ -375,9 +377,21 @@
     URL.revokeObjectURL(url);
   };
 
-  document.addEventListener('DOMContentLoaded', function () {
-    Array.prototype.forEach.call(document.querySelectorAll('.m4p-atcff'), function (root) {
-      new Importer(root);
-    });
+  var importer = null;
+
+  // Delegated, because one-page checkouts replace the cart block (and the button in it) on every refresh.
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('[data-m4p-atcff-open]');
+    var root = button && button.closest('.m4p-atcff');
+
+    if (!root) {
+      return;
+    }
+
+    if (!importer || !document.body.contains(importer.modal)) {
+      importer = new Importer(root);
+    }
+
+    importer.open();
   });
 })();

@@ -2,7 +2,7 @@
 <module>
     <name>m4p_addtocartfromfile</name>
     <displayName><![CDATA[Add to cart from a file]]></displayName>
-    <version><![CDATA[2.0.0]]></version>
+    <version><![CDATA[2.1.0]]></version>
     <description><![CDATA[Lets customers fill their cart from a CSV or spreadsheet file with product references and quantities.]]></description>
     <author><![CDATA[Modules4Presta]]></author>
     <tab><![CDATA[front_office_features]]></tab>

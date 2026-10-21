@@ -19,6 +19,7 @@ class m4p_addtocartfromfile extends Module
         'M4P_ADDTOCARTFROMFILE_CSV',
         'M4P_ADDTOCARTFROMFILE_XLS',
         'M4P_ADDTOCARTFROMFILE_MAX_ROWS',
+        'M4P_ADDTOCARTFROMFILE_MODULE_CSS',
     ];
 
     const DEFAULTS = [
@@ -26,7 +27,11 @@ class m4p_addtocartfromfile extends Module
         'M4P_ADDTOCARTFROMFILE_CSV' => 1,
         'M4P_ADDTOCARTFROMFILE_XLS' => 1,
         'M4P_ADDTOCARTFROMFILE_MAX_ROWS' => 500,
+        'M4P_ADDTOCARTFROMFILE_MODULE_CSS' => 1,
     ];
+
+    /** Pages that render the cart footer hook: the cart and the checkout (including one-page checkouts). */
+    const CART_PAGES = ['cart', 'order'];
 
     /** Settings used by the private releases, removed on install once read. */
     const LEGACY_KEYS = [
@@ -39,7 +44,7 @@ class m4p_addtocartfromfile extends Module
     {
         $this->name = 'm4p_addtocartfromfile';
         $this->tab = 'front_office_features';
-        $this->version = '2.0.0';
+        $this->version = '2.1.0';
         $this->author = 'Modules4Presta';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = ['min' => '1.7.6.0', 'max' => _PS_VERSION_];
@@ -120,6 +125,7 @@ class m4p_addtocartfromfile extends Module
                 Configuration::updateValue('M4P_ADDTOCARTFROMFILE_CSV', $csv);
                 Configuration::updateValue('M4P_ADDTOCARTFROMFILE_XLS', $xls);
                 Configuration::updateValue('M4P_ADDTOCARTFROMFILE_MAX_ROWS', (int) $maxRows);
+                Configuration::updateValue('M4P_ADDTOCARTFROMFILE_MODULE_CSS', (int) Tools::getValue('M4P_ADDTOCARTFROMFILE_MODULE_CSS', 0));
 
                 Tools::redirectAdmin($this->context->link->getAdminLink('AdminModules') . '&configure=' . $this->name . '&conf=6');
             }
@@ -183,6 +189,14 @@ class m4p_addtocartfromfile extends Module
                     'class' => 'fixed-width-sm',
                     'desc' => $this->trans('Rows beyond this limit are ignored and reported back to the customer.', [], 'Modules.M4paddtocartfromfile.Admin'),
                 ],
+                [
+                    'type' => 'switch',
+                    'label' => $this->trans('Load module styles', [], 'Modules.M4paddtocartfromfile.Admin'),
+                    'name' => 'M4P_ADDTOCARTFROMFILE_MODULE_CSS',
+                    'is_bool' => true,
+                    'desc' => $this->trans('Turn off when the theme styles the button and the dialog itself.', [], 'Modules.M4paddtocartfromfile.Admin'),
+                    'values' => $switchValues,
+                ],
             ],
             'submit' => [
                 'title' => $this->trans('Save', [], 'Modules.M4paddtocartfromfile.Admin'),
@@ -235,15 +249,19 @@ class m4p_addtocartfromfile extends Module
 
     public function hookActionFrontControllerSetMedia()
     {
-        if (!$this->isActive()) {
+        if (!$this->isActive()
+            || !in_array((string) ($this->context->controller->php_self ?? ''), self::CART_PAGES, true)
+        ) {
             return;
         }
 
-        $this->context->controller->registerStylesheet(
-            'module-m4p-addtocartfromfile',
-            'modules/' . $this->name . '/views/css/main.css',
-            ['media' => 'all', 'priority' => 150]
-        );
+        if ((int) Configuration::get('M4P_ADDTOCARTFROMFILE_MODULE_CSS')) {
+            $this->context->controller->registerStylesheet(
+                'module-m4p-addtocartfromfile',
+                'modules/' . $this->name . '/views/css/main.css',
+                ['media' => 'all', 'priority' => 150]
+            );
+        }
         $this->context->controller->registerJavascript(
             'module-m4p-addtocartfromfile',
             'modules/' . $this->name . '/views/js/main.js',
@@ -284,7 +302,7 @@ class m4p_addtocartfromfile extends Module
             'unavailable' => $this->trans('Not available for sale', [], 'Modules.M4paddtocartfromfile.Shop'),
             'bad_quantity' => $this->trans('Quantity is not a positive number', [], 'Modules.M4paddtocartfromfile.Shop'),
             'min_quantity' => $this->trans('Below the minimum order quantity', [], 'Modules.M4paddtocartfromfile.Shop'),
-            'skipped' => $this->trans('Skipped — over the row limit', [], 'Modules.M4paddtocartfromfile.Shop'),
+            'skipped' => $this->trans('Skipped – over the row limit', [], 'Modules.M4paddtocartfromfile.Shop'),
             'error' => $this->trans('Could not be added', [], 'Modules.M4paddtocartfromfile.Shop'),
         ];
     }

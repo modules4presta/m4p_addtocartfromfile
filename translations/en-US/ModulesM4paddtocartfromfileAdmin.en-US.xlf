@@ -78,6 +78,14 @@
         <source>Rows beyond this limit are ignored and reported back to the customer.</source>
         <target>Rows beyond this limit are ignored and reported back to the customer.</target>
       </trans-unit>
+      <trans-unit id="8f52cccd4d60a8687b58a37b3d5e1323">
+        <source>Load module styles</source>
+        <target>Load module styles</target>
+      </trans-unit>
+      <trans-unit id="55ed906f4a3fd34f91fd9c896858bf54">
+        <source>Turn off when the theme styles the button and the dialog itself.</source>
+        <target>Turn off when the theme styles the button and the dialog itself.</target>
+      </trans-unit>
       <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
         <source>Save</source>
         <target>Save</target>

@@ -36,7 +36,7 @@ A button appears under the cart. The customer picks a CSV or spreadsheet file, t
 
 The spreadsheet parser is a 900 kB JavaScript file, so the module does not load it with the cart page — it is fetched the first time a visitor actually picks an `.xls` or `.xlsx` file. A shop that accepts CSV only never downloads it. The parser ships inside the module rather than coming from a CDN, so your shop makes no third-party requests and the code cannot change without you updating the module.
 
-Turning the module off hides the button and changes nothing else; uninstalling it deletes its four settings and leaves every cart as it is. Because it only ever calls the same cart API that your "add to cart" buttons call, your stock rules, specific prices and cart rules apply to an imported row exactly as they would to a clicked one.
+Turning the module off hides the button and changes nothing else; uninstalling it deletes its five settings and leaves every cart as it is. Because it only ever calls the same cart API that your "add to cart" buttons call, your stock rules, specific prices and cart rules apply to an imported row exactly as they would to a clicked one.
 
 ## Compatibility
 
@@ -46,9 +46,9 @@ Turning the module off hides the button and changes nothing else; uninstalling i
 | PHP | 7.2+ |
 | Requirements | none — no external service, no PHP extension beyond the PrestaShop defaults |
 | Multistore | Compatible — products are resolved per shop |
-| Themes | Works with any theme — no template overrides required |
+| Themes | Works with any theme and one-page checkouts that re-render the cart — no template overrides required |
 
-The module overrides no core class and creates no database table. It stores four settings in `ps_configuration` and removes them when uninstalled.
+The module overrides no core class and creates no database table. It stores five settings in `ps_configuration` and removes them when uninstalled.
 
 ## Installation
 
@@ -66,6 +66,7 @@ If the button does not appear, check that the module is enabled in its own confi
 | **Accept CSV files** | Semicolon-separated files. Leave this on — it is the format every ERP can export. |
 | **Accept XLS and XLSX files** | Spreadsheets. Turn it off if you would rather your shop never served the 900 kB parser. |
 | **Rows per import** | How many rows one file may carry. The default of 500 suits most wholesale orders; rows above the limit are skipped and reported to the customer. |
+| **Load module styles** | On by default. Turn it off when your theme styles the button and the dialog itself; the module then loads only its script. |
 
 ## Frequently asked questions
 
