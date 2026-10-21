@@ -70,9 +70,9 @@
         <source>Below the minimum order quantity</source>
         <target>Poniżej minimalnej ilości zamówienia</target>
       </trans-unit>
-      <trans-unit id="c5960f7eafd457997f6342037e2786fb">
-        <source>Skipped — over the row limit</source>
-        <target>Pominięto — powyżej limitu wierszy</target>
+      <trans-unit id="50cf90ea9c4261b12b95355a1527c435">
+        <source>Skipped – over the row limit</source>
+        <target>Pominięto – powyżej limitu wierszy</target>
       </trans-unit>
       <trans-unit id="821635aa05ef3274378b8bf772aa7dac">
         <source>Could not be added</source>
@@ -88,7 +88,7 @@
       </trans-unit>
       <trans-unit id="928a47c563a7f70fdc2c896355b019ee">
         <source>One row per product: reference, EAN-13, quantity. The first row is skipped as a header.</source>
-        <target>Jeden wiersz na produkt: referencja, EAN-13, ilość. Pierwszy wiersz pomijamy jako nagłówek.</target>
+        <target>Jeden wiersz na produkt: indeks, EAN-13, ilość. Pierwszy wiersz jest pomijany jako nagłówek.</target>
       </trans-unit>
       <trans-unit id="beb7058c616b3d75c5eaad8344993291">
         <source>CSV and spreadsheet files are accepted.</source>
@@ -124,7 +124,7 @@
       </trans-unit>
       <trans-unit id="d0ca5f3888abe8687f6b08f88d268064">
         <source>Reference / EAN</source>
-        <target>Referencja / EAN</target>
+        <target>Indeks / EAN</target>
       </trans-unit>
       <trans-unit id="b823a976d0f14e7bbc37a9dd7c2b232c">
         <source>In the file</source>

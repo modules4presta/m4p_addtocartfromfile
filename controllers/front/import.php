@@ -87,8 +87,10 @@ class m4p_addtocartfromfileImportModuleFrontController extends ModuleFrontContro
             return $result;
         }
 
+        $rawQuantity = $quantity;
         $quantity = (int) str_replace([' ', ','], ['', '.'], $quantity);
         if ($quantity < 1) {
+            $result['requested'] = $rawQuantity;
             $result['status'] = 'bad_quantity';
 
             return $result;

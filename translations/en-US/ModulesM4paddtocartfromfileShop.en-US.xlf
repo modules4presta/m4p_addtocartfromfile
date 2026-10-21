@@ -70,9 +70,9 @@
         <source>Below the minimum order quantity</source>
         <target>Below the minimum order quantity</target>
       </trans-unit>
-      <trans-unit id="c5960f7eafd457997f6342037e2786fb">
-        <source>Skipped — over the row limit</source>
-        <target>Skipped — over the row limit</target>
+      <trans-unit id="50cf90ea9c4261b12b95355a1527c435">
+        <source>Skipped – over the row limit</source>
+        <target>Skipped – over the row limit</target>
       </trans-unit>
       <trans-unit id="821635aa05ef3274378b8bf772aa7dac">
         <source>Could not be added</source>
